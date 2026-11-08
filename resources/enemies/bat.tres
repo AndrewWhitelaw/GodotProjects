@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://wxiy165n8s0r"]
+
+[ext_resource type="Script" uid="uid://bxc1wwbehy4tl" path="res://scripts/enemy_data.gd" id="1_7gaa2"]
+[ext_resource type="Texture2D" uid="uid://bttujer77e3di" path="res://sprites/tilemap_packed.png" id="2_5vt2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vt2m"]
+atlas = ExtResource("2_5vt2m")
+region = Rect2(0, 160, 16, 16)
+
+[resource]
+script = ExtResource("1_7gaa2")
+name = "Bat"
+texture = SubResource("AtlasTexture_5vt2m")
+health = 40
+damage = 15
+exp_given = 5
+metadata/_custom_type_script = "uid://bxc1wwbehy4tl"

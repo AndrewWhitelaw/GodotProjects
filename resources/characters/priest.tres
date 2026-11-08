@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cg6nlew6goplo"]
+
+[ext_resource type="Script" uid="uid://dr4qprhjyiiu8" path="res://scripts/character_data.gd" id="1_etgby"]
+[ext_resource type="Texture2D" uid="uid://bttujer77e3di" path="res://sprites/tilemap_packed.png" id="2_y36pu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y36pu"]
+atlas = ExtResource("2_y36pu")
+region = Rect2(0, 112, 16, 16)
+
+[resource]
+script = ExtResource("1_etgby")
+name = "Priest"
+texture = SubResource("AtlasTexture_y36pu")
+max_health = 90
+damage = 15
+MP = 60
+metadata/_custom_type_script = "uid://dr4qprhjyiiu8"

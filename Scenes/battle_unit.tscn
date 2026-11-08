@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cplrfpgbhvlmn"]
+
+[ext_resource type="Script" uid="uid://cp32ku2ndckl1" path="res://scripts/battle_unit.gd" id="1_owscd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgq4r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pctaa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mpw1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mro78"]
+
+[node name="BattleUnit" type="Control" unique_id=1479922636]
+process_mode = 3
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 58.0
+offset_bottom = 67.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_owscd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1693237787]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1504673032]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "[NAME]"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1968079953]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=1441748352]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 50.0
+show_percentage = false
+
+[node name="Button" type="Button" parent="." unique_id=538368840]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vgq4r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pctaa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4mpw1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mro78")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

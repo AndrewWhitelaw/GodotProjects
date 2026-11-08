@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://c11n874y5isp0"]
+
+[ext_resource type="Script" uid="uid://bxc1wwbehy4tl" path="res://scripts/enemy_data.gd" id="1_heouu"]
+[ext_resource type="Texture2D" uid="uid://bttujer77e3di" path="res://sprites/tilemap_packed.png" id="2_r7hpx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7hpx"]
+atlas = ExtResource("2_r7hpx")
+region = Rect2(48, 160, 16, 16)
+
+[resource]
+script = ExtResource("1_heouu")
+name = "Rat"
+texture = SubResource("AtlasTexture_r7hpx")
+health = 50
+damage = 18
+exp_given = 8
+metadata/_custom_type_script = "uid://bxc1wwbehy4tl"

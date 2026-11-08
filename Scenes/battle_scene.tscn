@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://xqy6qt6sdwn0"]
+
+[ext_resource type="Script" uid="uid://64arp2t711dx" path="res://scripts/battle_scene.gd" id="1_hdvqd"]
+[ext_resource type="PackedScene" uid="uid://cplrfpgbhvlmn" path="res://Scenes/battle_unit.tscn" id="2_hdvqd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgq4r"]
+bg_color = Color(0, 0, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[node name="BattleScene" type="Control" unique_id=2028009852]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdvqd")
+battle_unit_scene = ExtResource("2_hdvqd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1984067996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2901961, 0.5058824, 1, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=986266821]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BattleArea" type="HBoxContainer" parent="MainLayout" unique_id=1153957979]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer" type="VBoxContainer" parent="MainLayout/BattleArea" unique_id=1311731000]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="EnemyContainer" type="VBoxContainer" parent="MainLayout/BattleArea" unique_id=847885416]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MainLayout" unique_id=1493082892]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vgq4r")
+
+[node name="Label" type="Label" parent="MainLayout/PanelContainer" unique_id=2094535754]
+layout_mode = 2
+text = "A wild group of [ENEMIES] appeared!"
+horizontal_alignment = 1
+
+[node name="ActionButtons" type="HBoxContainer" parent="MainLayout" unique_id=1136624998]
+layout_mode = 2
+alignment = 1
+
+[node name="AttackButton" type="Button" parent="MainLayout/ActionButtons" unique_id=534841975]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Attack"
+
+[node name="RunButton" type="Button" parent="MainLayout/ActionButtons" unique_id=1106444918]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Run"
+
+[connection signal="pressed" from="MainLayout/ActionButtons/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="MainLayout/ActionButtons/RunButton" to="." method="_on_run_button_pressed"]

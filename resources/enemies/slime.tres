@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bbp8hg5krqqkj"]
+
+[ext_resource type="Script" uid="uid://bxc1wwbehy4tl" path="res://scripts/enemy_data.gd" id="1_6pnpc"]
+[ext_resource type="Texture2D" uid="uid://bttujer77e3di" path="res://sprites/tilemap_packed.png" id="2_wcmes"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcmes"]
+atlas = ExtResource("2_wcmes")
+region = Rect2(0, 144, 16, 16)
+
+[resource]
+script = ExtResource("1_6pnpc")
+name = "Slime"
+texture = SubResource("AtlasTexture_wcmes")
+health = 80
+damage = 20
+exp_given = 10
+metadata/_custom_type_script = "uid://bxc1wwbehy4tl"

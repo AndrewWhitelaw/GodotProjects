@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://c2gb17dfi4dsn"]
+
+[ext_resource type="Script" uid="uid://dr4qprhjyiiu8" path="res://scripts/character_data.gd" id="1_1sxed"]
+[ext_resource type="Texture2D" uid="uid://bttujer77e3di" path="res://sprites/tilemap_packed.png" id="2_k0jde"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0jde"]
+atlas = ExtResource("2_k0jde")
+region = Rect2(32, 112, 16, 16)
+
+[resource]
+script = ExtResource("1_1sxed")
+name = "Thief"
+texture = SubResource("AtlasTexture_k0jde")
+max_health = 80
+damage = 15
+MP = 30
+metadata/_custom_type_script = "uid://dr4qprhjyiiu8"
